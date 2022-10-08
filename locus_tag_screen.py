@@ -28,7 +28,7 @@ def main(args):
             if var["locus_tag"]=="Rv0005":
                 present = True
         if present:
-            writer.writerow({"sample":s, "genome_pos":var["genome_pos"], "ref":var["ref"], "alt":var["alt"], "type":var["type"], "nucleotide_change":var["nucleotide_change"], "protein_change":var["protein_change"]})
+            writer.writerow({"sample":s, "genome_pos":var.get("genome_pos", "NA"), "ref":var.get("ref", "NA"), "alt":var.get("alt", "NA"), "type":var.get("type", "NA"), "nucleotide_change":var.get("nucleotide_change", "NA"), "protein_change":var.get("protein_change", "NA")})
 
     OUT.close()
 
