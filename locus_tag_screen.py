@@ -17,18 +17,15 @@ def main(args):
         samples = [x.replace(args.suffix,"") for x in os.listdir(args.dir) if x[-len(args.suffix):]==args.suffix]
 
     OUT = open(args.out,"w")
-    writer = csv.DictWriter(OUT, fieldnames = ["sample","genome_pos", "ref", "alt", "type", "nucleotide_change", "protein_change"])
+    writer = csv.DictWriter(OUT, fieldnames = ["sample", "locus_tag", "genome_pos", "ref", "alt", "type", "nucleotide_change", "protein_change"])
     writer.writeheader()
 
     for s in tqdm(samples):
         data = json.load(open(pp.filecheck("%s/%s%s" % (args.dir,s,args.suffix))))
-        present = False
-        resistant_drugs = set()
+
         for var in data["other_variants"]:
-            if var["locus_tag"]=="Rv0005":
-                present = True
-        if present:
-            writer.writerow({"sample":s, "genome_pos":var.get("genome_pos", "NA"), "ref":var.get("ref", "NA"), "alt":var.get("alt", "NA"), "type":var.get("type", "NA"), "nucleotide_change":var.get("nucleotide_change", "NA"), "protein_change":var.get("protein_change", "NA")})
+            if var["locus_tag"]==args.lt:
+                writer.writerow({"sample":s, "locus_tag":var.get("locus_tag", "NA"), "genome_pos":var.get("genome_pos", "NA"), "ref":var.get("ref", "NA"), "alt":var.get("alt", "NA"), "type":var.get("type", "NA"), "nucleotide_change":var.get("nucleotide_change", "NA"), "protein_change":var.get("protein_change", "NA")})      
 
     OUT.close()
 
@@ -38,6 +35,7 @@ parser.add_argument('--samples', type=str, help='File with samples')
 parser.add_argument('--dir', default="results/", type=str, help='Directory containing results')
 parser.add_argument('--db', default="tbdb", type=str, help='Database name')
 parser.add_argument('--suffix', default=".results.json", type=str, help='File suffix')
+parser.add_argument('--lt', default="Rv0005", type=str, help='Locus tag to screen')
 parser.set_defaults(func=main)
 
 args = parser.parse_args()
