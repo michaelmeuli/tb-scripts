@@ -17,7 +17,7 @@ def main(args):
         samples = [x.replace(args.suffix,"") for x in os.listdir(args.dir) if x[-len(args.suffix):]==args.suffix]
 
     OUT = open(args.out,"w")
-    writer = csv.DictWriter(OUT, fieldnames = ["sample","dr-class"])
+    writer = csv.DictWriter(OUT, fieldnames = ["sample","genome_pos", "ref", "alt", "type", "nucleotide_change", "protein_change"])
     writer.writeheader()
 
     for s in tqdm(samples):
@@ -27,27 +27,8 @@ def main(args):
         for var in data["other_variants"]:
             if var["locus_tag"]=="Rv0005":
                 present = True
-            for d in var["drugs"]:
-                resistant_drugs.add(d["drug"])
-        rif = "rifampicin" in resistant_drugs
-        inh = "isoniazid" in resistant_drugs
-        flq = len(FLQ_set.intersection(resistant_drugs)) > 0
-        gpa = len(GPA_set.intersection(resistant_drugs)) > 0
-
-        if len(resistant_drugs)==0:
-            drtype = "Sensitive"
-        elif (rif and not inh) or (inh and not rif):
-            drtype = "Pre-MDR"
-        elif (rif and inh) and (not flq and not gpa):
-            drtype = "MDR"
-        elif (rif and inh) and ( flq and not gpa ):
-            drtype = "Pre-XDR"
-        elif (rif and inh) and (flq and gpa):
-            drtype = "XDR"
-        else:
-            drtype = "Other"
-
-        writer.writerow({"sample":s, "dr-class":drtype})
+        if present:
+            writer.writerow({"sample":s, "genome_pos":var["genome_pos"], "ref":var["ref"], "alt":var["alt"], "type":var["type"], "nucleotide_change":var["nucleotide_change"], "protein_change":var["protein_change"]})
 
     OUT.close()
 
