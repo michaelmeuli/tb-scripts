@@ -1,0 +1,1 @@
+./scripts/locus_tag_screen.py --dir ./test_run/results/ --out ./results-lt/test1.csv
