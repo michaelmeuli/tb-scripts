@@ -11,16 +11,10 @@ import pathogenprofiler as pp
 import tbprofiler as tbprofiler
 
 def main(args):
-    bed_file = "%s/share/tbprofiler/%s.bed" % (sys.base_prefix,args.db)
-    locus_tag2drugs = tbprofiler.get_lt2drugs(bed_file)
-
     if args.samples:
         samples = [x.rstrip() for x in open(args.samples).readlines()]
     else:
         samples = [x.replace(args.suffix,"") for x in os.listdir(args.dir) if x[-len(args.suffix):]==args.suffix]
-
-    FLQ_set = set(["moxifloxacin","levofloxacin","ciprofloxacin","ofloxacin"])
-    GPA_set = set(["bedaquiline","linezolid"])
 
     OUT = open(args.out,"w")
     writer = csv.DictWriter(OUT, fieldnames = ["sample","dr-class"])
