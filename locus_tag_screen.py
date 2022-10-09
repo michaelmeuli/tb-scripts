@@ -1,5 +1,6 @@
 #! /usr/bin/env python3
 
+from cgitb import small
 import sys
 import csv
 import json
@@ -16,16 +17,28 @@ def main(args):
     else:
         samples = [x.replace(args.suffix,"") for x in os.listdir(args.dir) if x[-len(args.suffix):]==args.suffix]
 
+    print(len(samples))
+    sample_nr = 0
+    sample_positiv_count = 0
+
     OUT = open(args.out,"w")
-    writer = csv.DictWriter(OUT, fieldnames = ["sample", "locus_tag", "genome_pos", "ref", "alt", "type", "nucleotide_change", "protein_change"])
+    writer = csv.DictWriter(OUT, fieldnames = ["sample", "locus_tag", "genome_pos", "ref", "alt", "type", "nucleotide_change", "protein_change", "sample_nr", "sample_positiv_count", "sample_total_nr"])
     writer.writeheader()
 
     for s in tqdm(samples):
+        sample_nr += 1
         data = json.load(open(pp.filecheck("%s/%s%s" % (args.dir,s,args.suffix))))
+        
+        new = False
+        for var in data["other_variants"]:
+            if var["locus_tag"]==args.lt:
+                new = True
+        if new:
+            sample_positiv_count +=1
 
         for var in data["other_variants"]:
             if var["locus_tag"]==args.lt:
-                writer.writerow({"sample":s, "locus_tag":var.get("locus_tag", "NA"), "genome_pos":var.get("genome_pos", "NA"), "ref":var.get("ref", "NA"), "alt":var.get("alt", "NA"), "type":var.get("type", "NA"), "nucleotide_change":var.get("nucleotide_change", "NA"), "protein_change":var.get("protein_change", "NA")})      
+                writer.writerow({"sample":s, "locus_tag":var.get("locus_tag", "NA"), "genome_pos":var.get("genome_pos", "NA"), "ref":var.get("ref", "NA"), "alt":var.get("alt", "NA"), "type":var.get("type", "NA"), "nucleotide_change":var.get("nucleotide_change", "NA"), "protein_change":var.get("protein_change", "NA"), "sample_nr":sample_nr, "sample_positiv_count":sample_positiv_count, "sample_total_nr":len(samples)})      
 
     OUT.close()
 
