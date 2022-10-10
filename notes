@@ -37,4 +37,7 @@ TODO: update doc about parse_db.py
 
 tb-profiler load_library drdb.config.json
 TODO: fix to:
-tb-profiler load_library drdb.config.json
+tb-profiler load_library tbdb
+version installed anyway not up to date
+
+--external_db /home/michael/Bioinformatik/tbprofiler/tbdb/tbdb
