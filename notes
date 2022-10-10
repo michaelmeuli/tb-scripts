@@ -27,3 +27,10 @@ p.Leu328Trp
 p.Leu328Phe
 p.Ala527Asp
 CP65
+
+gpsI,p.Leu328Trp,CP65,resistance,,,Uncertain significance
+gpsI,p.Leu328Phe,CP65,resistance,,,Uncertain significance
+gpsI,p.Ala527Asp,CP65,resistance,,,Uncertain significance
+
+don't use parse_db.py, use tb-profiler create_db
+TODO: update doc about parse_db.py
