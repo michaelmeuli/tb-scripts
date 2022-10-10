@@ -17,5 +17,5 @@ tb-profiler profile -1 /mnt/e/NGS_Mtb/raw-sequences-test/ERR1664619_1.fastq.gz -
 ls fastq/ | grep _1.fastq.gz | sed 's/_1.fastq.gz//' > samples.txt
 
 ls /mnt/e/NGS_Mtb/raw-sequences-test/ | grep _L001_R1_001.fastq.gz | sed 's/_L001_R1_001.fastq.gz//' > /mnt/e/NGS_Mtb/raw-sequences-test/samples.txt
-mkdir bam vcf results
+cd /mnt/e/NGS_Mtb/tbprofiler-results-test && mkdir bam vcf results
 cat /mnt/e/NGS_Mtb/raw-sequences-test/samples.txt | parallel --bar -j 2 tb-profiler profile -1 /mnt/e/NGS_Mtb/raw-sequences-test/{}_L001_R1_001.fastq.gz -2 /mnt/e/NGS_Mtb/raw-sequences-test/{}_L001_R2_001.fastq.gz -p {} -d /mnt/e/NGS_Mtb/tbprofiler-results-test
