@@ -34,3 +34,7 @@ gpsI,p.Ala527Asp,CP65,resistance,,,Uncertain significance
 
 don't use parse_db.py, use tb-profiler create_db
 TODO: update doc about parse_db.py
+
+tb-profiler load_library drdb.config.json
+TODO: fix to:
+tb-profiler load_library drdb.config.json
