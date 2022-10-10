@@ -1,1 +1,19 @@
+On wsl:
+sudo mount -t drvfs E: /mnt/e
+
+tb-profiler profile -1 /mnt/e/NGS_Mtb/raw-sequences-test/Michael12_S7_L001_R1_001.fastq.gz -2 /mnt/e/NGS_Mtb/raw-sequences-test/Michael12_S7_L001_R2_001.fastq.gz -d /mnt/e/NGS_Mtb/tbprofiler-results-test -t 4 -p Michael12_S7_L001
+tb-profiler profile -1 /mnt/e/NGS_Mtb/raw-sequences-test/ERR1664619_1.fastq.gz -2 /mnt/e/NGS_Mtb/raw-sequences-test/2022187011_S1_L001_R2_001.fastq.gz -d /mnt/e/NGS_Mtb/tbprofiler-results-test -t 4 -p 2022187011_S1_L001
+
+/mnt/e/NGS_Mtb/raw-sequences-test/
+/mnt/e/NGS_Mtb/tbprofiler-results-test
+/mnt/e/NGS_Mtb/locus-tag-screen-results-test
+
+
+
 ./scripts/locus_tag_screen.py --dir ./test_run/results/ --out ./results-lt/test1.csv
+./tb-scripts/locus_tag_screen.py --dir /mnt/e/NGS_Mtb/tbprofiler-results-test/results/ --lt Rv2783c --out /mnt/e/NGS_Mtb/locus-tag-screen-results-test/test1.csv
+
+
+ls fastq/ | grep _1.fastq.gz | sed 's/_1.fastq.gz//' > samples.txt
+ls /mnt/e/NGS_Mtb/raw-sequences-test/ | grep _L001_R1_001.fastq.gz | sed 's/_L001_R1_001.fastq.gz//' > samples.txt
+mkdir bam vcf results
