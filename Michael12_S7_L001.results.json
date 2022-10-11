@@ -1,0 +1,455 @@
+{
+    "id": "Michael12_S7_L001",
+    "tbprofiler_version": "4.3.0",
+    "qc": {
+        "pct_reads_mapped": 98.7,
+        "num_reads_mapped": 3048743,
+        "median_coverage": 88,
+        "gene_coverage": [
+            {
+                "fraction": 0.0,
+                "cutoff": 0,
+                "locus_tag": "Rv0005",
+                "gene": "gyrB"
+            },
+            {
+                "fraction": 0.0,
+                "cutoff": 0,
+                "locus_tag": "Rv0006",
+                "gene": "gyrA"
+            },
+            {
+                "fraction": 0.0,
+                "cutoff": 0,
+                "locus_tag": "Rv0407",
+                "gene": "fgd1"
+            },
+            {
+                "fraction": 0.0,
+                "cutoff": 0,
+                "locus_tag": "Rv0486",
+                "gene": "mshA"
+            },
+            {
+                "fraction": 0.0,
+                "cutoff": 0,
+                "locus_tag": "Rv0529",
+                "gene": "ccsA"
+            },
+            {
+                "fraction": 0.0,
+                "cutoff": 0,
+                "locus_tag": "Rv0667",
+                "gene": "rpoB"
+            },
+            {
+                "fraction": 0.0,
+                "cutoff": 0,
+                "locus_tag": "Rv0668",
+                "gene": "rpoC"
+            },
+            {
+                "fraction": 0.0,
+                "cutoff": 0,
+                "locus_tag": "Rv0676c",
+                "gene": "mmpL5"
+            },
+            {
+                "fraction": 0.0,
+                "cutoff": 0,
+                "locus_tag": "Rv0677c",
+                "gene": "mmpS5"
+            },
+            {
+                "fraction": 0.0,
+                "cutoff": 0,
+                "locus_tag": "Rv0678",
+                "gene": "mmpR5"
+            },
+            {
+                "fraction": 0.0,
+                "cutoff": 0,
+                "locus_tag": "Rv0682",
+                "gene": "rpsL"
+            },
+            {
+                "fraction": 0.0,
+                "cutoff": 0,
+                "locus_tag": "Rv0701",
+                "gene": "rplC"
+            },
+            {
+                "fraction": 0.0,
+                "cutoff": 0,
+                "locus_tag": "Rv1173",
+                "gene": "fbiC"
+            },
+            {
+                "fraction": 0.0,
+                "cutoff": 0,
+                "locus_tag": "Rv1258c",
+                "gene": "Rv1258c"
+            },
+            {
+                "fraction": 0.0,
+                "cutoff": 0,
+                "locus_tag": "Rv1267c",
+                "gene": "embR"
+            },
+            {
+                "fraction": 0.0,
+                "cutoff": 0,
+                "locus_tag": "Rv1305",
+                "gene": "atpE"
+            },
+            {
+                "fraction": 0.0,
+                "cutoff": 0,
+                "locus_tag": "EBG00000313325",
+                "gene": "rrs"
+            },
+            {
+                "fraction": 0.0,
+                "cutoff": 0,
+                "locus_tag": "EBG00000313339",
+                "gene": "rrl"
+            },
+            {
+                "fraction": 0.0,
+                "cutoff": 0,
+                "locus_tag": "Rv1483",
+                "gene": "fabG1"
+            },
+            {
+                "fraction": 0.0,
+                "cutoff": 0,
+                "locus_tag": "Rv1484",
+                "gene": "inhA"
+            },
+            {
+                "fraction": 0.0,
+                "cutoff": 0,
+                "locus_tag": "Rv1630",
+                "gene": "rpsA"
+            },
+            {
+                "fraction": 0.0,
+                "cutoff": 0,
+                "locus_tag": "Rv1694",
+                "gene": "tlyA"
+            },
+            {
+                "fraction": 0.0,
+                "cutoff": 0,
+                "locus_tag": "Rv1854c",
+                "gene": "ndh"
+            },
+            {
+                "fraction": 0.0,
+                "cutoff": 0,
+                "locus_tag": "Rv1908c",
+                "gene": "katG"
+            },
+            {
+                "fraction": 0.0,
+                "cutoff": 0,
+                "locus_tag": "Rv1918c",
+                "gene": "PPE35"
+            },
+            {
+                "fraction": 0.0,
+                "cutoff": 0,
+                "locus_tag": "Rv1979c",
+                "gene": "Rv1979c"
+            },
+            {
+                "fraction": 0.0,
+                "cutoff": 0,
+                "locus_tag": "Rv2043c",
+                "gene": "pncA"
+            },
+            {
+                "fraction": 0.0,
+                "cutoff": 0,
+                "locus_tag": "Rv2245",
+                "gene": "kasA"
+            },
+            {
+                "fraction": 0.0,
+                "cutoff": 0,
+                "locus_tag": "Rv2416c",
+                "gene": "eis"
+            },
+            {
+                "fraction": 0.0,
+                "cutoff": 0,
+                "locus_tag": "Rv2428",
+                "gene": "ahpC"
+            },
+            {
+                "fraction": 0.0,
+                "cutoff": 0,
+                "locus_tag": "Rv2447c",
+                "gene": "folC"
+            },
+            {
+                "fraction": 0.0,
+                "cutoff": 0,
+                "locus_tag": "Rv2535c",
+                "gene": "pepQ"
+            },
+            {
+                "fraction": 0.0,
+                "cutoff": 0,
+                "locus_tag": "Rv2671",
+                "gene": "ribD"
+            },
+            {
+                "fraction": 0.0,
+                "cutoff": 0,
+                "locus_tag": "Rv2752c",
+                "gene": "Rv2752c"
+            },
+            {
+                "fraction": 0.0,
+                "cutoff": 0,
+                "locus_tag": "Rv2754c",
+                "gene": "thyX"
+            },
+            {
+                "fraction": 0.0,
+                "cutoff": 0,
+                "locus_tag": "Rv2764c",
+                "gene": "thyA"
+            },
+            {
+                "fraction": 0.0,
+                "cutoff": 0,
+                "locus_tag": "Rv2780",
+                "gene": "ald"
+            },
+            {
+                "fraction": 0.0,
+                "cutoff": 0,
+                "locus_tag": "Rv2783c",
+                "gene": "gpsI"
+            },
+            {
+                "fraction": 0.0,
+                "cutoff": 0,
+                "locus_tag": "Rv2983",
+                "gene": "fbiD"
+            },
+            {
+                "fraction": 0.0,
+                "cutoff": 0,
+                "locus_tag": "Rv3083",
+                "gene": "Rv3083"
+            },
+            {
+                "fraction": 0.0,
+                "cutoff": 0,
+                "locus_tag": "Rv3106",
+                "gene": "fprA"
+            },
+            {
+                "fraction": 0.0,
+                "cutoff": 0,
+                "locus_tag": "Rv3197A",
+                "gene": "whiB7"
+            },
+            {
+                "fraction": 0.0,
+                "cutoff": 0,
+                "locus_tag": "Rv3236c",
+                "gene": "Rv3236c"
+            },
+            {
+                "fraction": 0.0,
+                "cutoff": 0,
+                "locus_tag": "Rv3261",
+                "gene": "fbiA"
+            },
+            {
+                "fraction": 0.0,
+                "cutoff": 0,
+                "locus_tag": "Rv3262",
+                "gene": "fbiB"
+            },
+            {
+                "fraction": 0.0,
+                "cutoff": 0,
+                "locus_tag": "Rv3423c",
+                "gene": "alr"
+            },
+            {
+                "fraction": 0.0,
+                "cutoff": 0,
+                "locus_tag": "Rv3457c",
+                "gene": "rpoA"
+            },
+            {
+                "fraction": 0.0,
+                "cutoff": 0,
+                "locus_tag": "Rv3547",
+                "gene": "ddn"
+            },
+            {
+                "fraction": 0.0,
+                "cutoff": 0,
+                "locus_tag": "Rv3596c",
+                "gene": "clpC1"
+            },
+            {
+                "fraction": 0.0,
+                "cutoff": 0,
+                "locus_tag": "Rv3601c",
+                "gene": "panD"
+            },
+            {
+                "fraction": 0.0,
+                "cutoff": 0,
+                "locus_tag": "Rv3793",
+                "gene": "embC"
+            },
+            {
+                "fraction": 0.0,
+                "cutoff": 0,
+                "locus_tag": "Rv3794",
+                "gene": "embA"
+            },
+            {
+                "fraction": 0.0,
+                "cutoff": 0,
+                "locus_tag": "Rv3795",
+                "gene": "embB"
+            },
+            {
+                "fraction": 0.0,
+                "cutoff": 0,
+                "locus_tag": "Rv3805c",
+                "gene": "aftB"
+            },
+            {
+                "fraction": 0.0,
+                "cutoff": 0,
+                "locus_tag": "Rv3806c",
+                "gene": "ubiA"
+            },
+            {
+                "fraction": 0.0,
+                "cutoff": 0,
+                "locus_tag": "Rv3854c",
+                "gene": "ethA"
+            },
+            {
+                "fraction": 0.0,
+                "cutoff": 0,
+                "locus_tag": "Rv3855",
+                "gene": "ethR"
+            },
+            {
+                "fraction": 0.0,
+                "cutoff": 0,
+                "locus_tag": "Rv3862c",
+                "gene": "whiB6"
+            },
+            {
+                "fraction": 0.0,
+                "cutoff": 0,
+                "locus_tag": "Rv3919c",
+                "gene": "gid"
+            }
+        ],
+        "missing_positions": []
+    },
+    "delly": "success",
+    "input_data_source": "fastq",
+    "lineage": [
+        {
+            "lin": "lineage4",
+            "family": "Euro-American",
+            "spoligotype": "LAM;T;S;X;H",
+            "rd": "None",
+            "frac": 1.0
+        },
+        {
+            "lin": "lineage4.9",
+            "family": "Euro-American (H37Rv-like)",
+            "spoligotype": "T1",
+            "rd": "None",
+            "frac": 1.0
+        }
+    ],
+    "main_lin": "lineage4",
+    "sublin": "lineage4.9",
+    "dr_variants": [
+        {
+            "chrom": "Chromosome",
+            "genome_pos": 3091615,
+            "ref": "A",
+            "alt": "C",
+            "freq": 0.987012987012987,
+            "feature_id": "CCP45582",
+            "type": "missense_variant",
+            "nucleotide_change": "c.983T>G",
+            "protein_change": "p.Leu328Trp",
+            "annotation": [],
+            "alternate_consequences": [],
+            "change": "p.Leu328Trp",
+            "locus_tag": "Rv2783c",
+            "gene": "gpsI",
+            "drugs": [
+                {
+                    "type": "drug",
+                    "drug": "CP65",
+                    "confers": "resistance",
+                    "who confidence": "Uncertain significance"
+                }
+            ]
+        }
+    ],
+    "other_variants": [
+        {
+            "chrom": "Chromosome",
+            "genome_pos": 1471659,
+            "ref": "C",
+            "alt": "T",
+            "freq": 1.0,
+            "feature_id": "EBG00000313325-1",
+            "type": "upstream_gene_variant",
+            "nucleotide_change": "n.-187C>T",
+            "protein_change": "",
+            "alternate_consequences": [],
+            "change": "n.-187C>T",
+            "locus_tag": "EBG00000313325",
+            "gene": "rrs",
+            "gene_associated_drugs": [
+                "amikacin",
+                "kanamycin",
+                "capreomycin",
+                "linezolid",
+                "aminoglycosides",
+                "streptomycin"
+            ]
+        }
+    ],
+    "drtype": "Other",
+    "db_version": {
+        "name": "tbdb",
+        "commit": "02b7f4a",
+        "Author": "Michael Meuli <michael.meuli@gmail.com>",
+        "Date": "Mon Oct 10 20:54:03 2022 +0200"
+    },
+    "pipeline": [
+        {
+            "Analysis": "Mapping",
+            "Program": "/mnt/e/NGS_Mtb/raw-sequences-test/Michael12_S7_L001_R1_001.fastq.gz"
+        },
+        {
+            "Analysis": "Variant calling",
+            "Program": "freebayes"
+        }
+    ],
+    "timestamp": "11-10-2022 09:23:56"
+}

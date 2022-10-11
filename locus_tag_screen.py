@@ -30,13 +30,13 @@ def main(args):
         data = json.load(open(pp.filecheck("%s/%s%s" % (args.dir,s,args.suffix))))
         
         new = False
-        for var in data["other_variants"]:
+        for var in data["dr_variants"]:
             if var["locus_tag"]==args.lt:
                 new = True
         if new:
             sample_positiv_count +=1
 
-        for var in data["other_variants"]:
+        for var in data["dr_variants"]:
             if var["locus_tag"]==args.lt:
                 writer.writerow({"sample":s, "locus_tag":var.get("locus_tag", "NA"), "genome_pos":var.get("genome_pos", "NA"), "ref":var.get("ref", "NA"), "alt":var.get("alt", "NA"), "type":var.get("type", "NA"), "nucleotide_change":var.get("nucleotide_change", "NA"), "protein_change":var.get("protein_change", "NA"), "sample_nr":sample_nr, "sample_positiv_count":sample_positiv_count, "sample_total_nr":len(samples)})      
 

@@ -32,7 +32,7 @@ gpsI,p.Leu328Trp,CP65,resistance,,,Uncertain significance
 gpsI,p.Leu328Phe,CP65,resistance,,,Uncertain significance
 gpsI,p.Ala527Asp,CP65,resistance,,,Uncertain significance
 
-don't use parse_db.py, use tb-profiler create_db
+do not use parse_db.py, use tb-profiler create_db
 TODO: update doc about parse_db.py
 
 tb-profiler load_library drdb.config.json
@@ -41,3 +41,13 @@ tb-profiler load_library tbdb
 version installed anyway not up to date
 
 --external_db /home/michael/Bioinformatik/tbprofiler/tbdb/tbdb
+--external_db /home/michael/tbprofiler/tbdb/tbdb
+
+
+tb-profiler profile -1 /mnt/e/NGS_Mtb/raw-sequences-test/Michael12_S7_L001_R1_001.fastq.gz -2 /mnt/e/NGS_Mtb/raw-sequences-test/Michael12_S7_L001_R2_001.fastq.gz -d /mnt/e/NGS_Mtb/tbprofiler-results-test -t 4 -p Michael12_S7_L001 --external_db /home/michael/tbprofiler/tbdb/tbdb
+
+--external_db /home/michael/tbprofiler/tbdb/tbdb didn't work, copied db manually to /home/michael/miniconda3/envs/tbprofiler/share/tbprofiler
+
+worked:
+tb-profiler profile -1 /mnt/e/NGS_Mtb/raw-sequences-test/Michael12_S7_L001_R1_001.fastq.gz -2 /mnt/e/NGS_Mtb/raw-sequences-test/Michael12_S7_L001_R2_001.fastq.gz -d /mnt/e/NGS_Mtb/tbprofiler-results-test -t 4 -p Michael12_S7_L001
+
