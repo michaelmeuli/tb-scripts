@@ -57,7 +57,7 @@ cat /mnt/e/NGS_Mtb/raw-sequences-test/samples.txt | parallel --bar -j 2 tb-profi
 next:
 ls /mnt/e/NGS_Mtb/raw-sequences/ | grep _L001_R1_001.fastq.gz | sed 's/_L001_R1_001.fastq.gz//' > /mnt/e/NGS_Mtb/raw-sequences/samples.txt
 cat /mnt/e/NGS_Mtb/raw-sequences/samples.txt | parallel --bar -j 2 tb-profiler profile -1 /mnt/e/NGS_Mtb/raw-sequences/{}_L001_R1_001.fastq.gz -2 /mnt/e/NGS_Mtb/raw-sequences/{}_L001_R2_001.fastq.gz -p {} -d /mnt/e/NGS_Mtb/tbprofiler-results
-./tb-scripts/locus_tag_screen.py --dir /mnt/e/NGS_Mtb/tbprofiler-results/results/ --lt Rv2783c --out /mnt/e/NGS_Mtb/locus-tag-screen-results/test1.csv
+./tb-scripts/locus_tag_screen.py --dir /mnt/e/NGS_Mtb/tbprofiler-results/results/ --lt Rv2783c --out /mnt/e/NGS_Mtb/locus-tag-screen-results/results-Mtb-2022-1.csv
 
 
 
